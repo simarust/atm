@@ -1,0 +1,14 @@
+body {
+  width: 350px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+}
+
+p, li, input, button {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+}
+
+li:hover {
+  text-decoration: line-through;
+}
