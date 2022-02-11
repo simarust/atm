@@ -26,3 +26,6 @@ ATM - Automated Task Maker for Azure DevOps is a Chrome Extension that can be us
   
 ## Contribution
 - Feel free to contribute and to create pull requests... 🤓
+
+## Credits
+<a href="https://icons8.com/icon/YjYfFM9qdln4/atm-machine">Atm Machine icon by Icons8</a>
