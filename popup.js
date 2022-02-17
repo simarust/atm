@@ -36,11 +36,22 @@ function addTask() {
   }
 }
 
+function toggleHighlighting(event) {
+  chrome.storage.sync.set({ highlighting: event.target.checked })
+}
+
+const addTaskButton = document.getElementById("addTask")
+addTaskButton.addEventListener("click", addTask)
+
+const highlightCheckbox = document.getElementById("highlightCheckbox")
+highlightCheckbox.addEventListener("click", toggleHighlighting)
+
 chrome.storage.sync.get("tasks", ({ tasks }) => {
   if (tasks) tasks.forEach(task => {
     addListItem(task.name, task.id)
   });
 })
 
-const addTaskButton = document.getElementById("addTask")
-addTaskButton.addEventListener("click", addTask)
+chrome.storage.sync.get("highlighting", ({ highlighting }) => {
+  highlightCheckbox.checked = highlighting
+})
