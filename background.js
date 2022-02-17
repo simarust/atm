@@ -155,7 +155,6 @@ chrome.runtime.onMessage.addListener(async request => {
     const iterations = await getIterations()
     for (const iteration of iterations) {
       const workItems = await getWorkItems(iteration.id)
-      console.log(workItems)
       for (const relation of workItems.workItemRelations) {
         if (relation.rel == null) {
           const workItem = await getWorkItem(relation.target.url)

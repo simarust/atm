@@ -10,9 +10,7 @@ function addListItem(taskName, taskId) {
 }
 
 function removeListItem(event) {
-  console.log(event.target)
   var idToRemove = event.target.id
-  console.log(idToRemove)
   chrome.storage.sync.get("tasks", ({ tasks }) => {
     tasks = tasks.filter(task => task.id != idToRemove)
     chrome.storage.sync.set({ tasks })
